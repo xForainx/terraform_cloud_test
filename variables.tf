@@ -1,6 +1,7 @@
 variable "name_master_vm"{
   description = "name of master vm"
   default     = "master"
+  sensitive   = "true" //permet de cacher la valeur lorsqu'on fait les plan/apply
 }
 variable "name_worker_vm"{
   description = "name of worker vm"
