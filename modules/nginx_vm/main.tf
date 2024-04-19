@@ -30,7 +30,7 @@ resource "null_resource" "stack_install" {
   depends_on = [azurerm_linux_virtual_machine.myvmcours]  # Attend la création de la machine virtuelle
 
   provisioner "file" {
-    source      = "../machines/${var.script_file}"  # Chemin local du fichier setup.sh
+    source      = "./machines/${var.script_file}"  # Chemin local du fichier setup.sh
     destination = "/home/adminuser/stack_install.sh"  # Chemin de destination sur la machine distante
 
     connection {
